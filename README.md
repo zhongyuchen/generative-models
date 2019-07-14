@@ -5,9 +5,9 @@ Train with MNIST and generate hand-written numbers with generative models includ
 ## Generative Models
 
 The following generative models are included, with configs in `config.ini`:
-* VAE in `vae.py`
-* DCGAN in `dcgan.py`
-* RealNVP in `realnvp.py`
+* VAE (Variational Auto-Encoder) in `vae.py`
+* DCGAN (Deep Convolutional Generative Adversarial Networks) in `dcgan.py`
+* RealNVP (Real-valued Non-Volume Preserving) in `realnvp.py`
 
 ## Data: MNIST
 
@@ -29,7 +29,7 @@ The following generative models are included, with configs in `config.ini`:
 
 ### Command Line
 
-* Train
+* Run
 ```commandline
 bash run_vae.sh
 ```
@@ -45,13 +45,9 @@ tensorboard --logdir=log/vae/
 | ------| ------|
 | ![vae_train_batch_loss](pic/vae/train_batch_loss.png) | ![vae_train_epoch_loss](pic/vae/train_epoch_loss.png) |
 
-| Dev Loss with best epoch 62|
-| ------|
-| ![vae_dev_epoch_loss](pic/vae/dev_epoch_loss.png) |
-
-| Test Loss |
-| ------|
-| 102.0952 |
+| Dev Loss with best epoch 62|Test Loss |
+| ------|------|
+| ![vae_dev_epoch_loss](pic/vae/dev_epoch_loss.png) |102.0952 |
 
 ### Reconstructed Result
 
@@ -94,7 +90,7 @@ VAE in [pytorch/examples](https://github.com/pytorch/examples)
 ### Model
 
 ```
-Generator(                                                                                                    [397/791]
+Generator(
   (main): Sequential(
     (0): ConvTranspose2d(100, 512, kernel_size=(4, 4), stride=(1, 1), bias=False)
     (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
@@ -136,7 +132,7 @@ Discriminator(
 
 ### Command Line
 
-* Train
+* Run
 ```commandline
 bash run_dcgan.sh
 ```
@@ -162,7 +158,8 @@ tensorboard --logdir=log/dcgan/
 
 ### Reference
 
-[Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+* [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+* [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434)
 
 ### Link
 
@@ -172,7 +169,7 @@ DCGAN in [pytorch/examples](https://github.com/pytorch/examples)
 
 ### Command Line
 
-* Train
+* Run
 ```commandline
 bash run_realnvp.sh
 ```
