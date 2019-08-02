@@ -9,6 +9,13 @@ The following generative models are included, with configs in `config.ini`:
 * DCGAN (Deep Convolutional Generative Adversarial Networks) in `dcgan.py`
 * RealNVP (Real-valued Non-Volume Preserving) in `realnvp.py`
 
+## Prerequisites
+
+* Install the required packages by:
+```angular2
+pip install -r requirements.txt
+```
+
 ## Data: MNIST
 
 * Sample
